@@ -13,7 +13,7 @@ import sample.Controller;
 
 public class SettingsPane extends VBox {
 
-    public final Button infoBtn;
+    public final Button returnBtn;
     private Label leftLabel, rightLabel, lowerLabel, upperLabel;
     private final Bounds bounds;
     public TextField leftField, rightField, lowerField, upperField;
@@ -22,13 +22,13 @@ public class SettingsPane extends VBox {
     public SettingsPane(Bounds bounds, GraphPane graphPane) {
         this.graphPane = graphPane;
 
-        this.infoBtn = new Button();
-        infoBtn.setText("Info");
+        this.returnBtn = new Button();
+        returnBtn.setText("Return");
 
         this.bounds = bounds;
 
         HBox buttonBox = new HBox();
-        buttonBox.getChildren().add(infoBtn);
+        buttonBox.getChildren().add(returnBtn);
 
         HBox leftBox = new HBox();
         HBox rightBox = new HBox();

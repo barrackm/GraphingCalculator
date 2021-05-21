@@ -138,6 +138,12 @@ public class GraphPane extends Pane {
         while (!axis.isEmpty()) {
             this.getChildren().remove(axis.remove(0));
         }
+        if (!controller.showGridB) {
+            for(Label label : scaleLabels) {
+                this.getChildren().remove(label);
+            }
+            return;
+        }
         while (!scaleLabels.isEmpty()) {
             this.getChildren().remove(scaleLabels.remove(0));
         }
